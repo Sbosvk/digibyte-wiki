@@ -2,11 +2,14 @@
 title: Install DigiByte Core
 description: Guides for installing the official DigiByte Core software wallet.
 published: true
-date: 2022-11-02T21:34:37.492Z
+date: 2022-11-04T10:41:23.514Z
 tags: 
 editor: markdown
 dateCreated: 2022-11-02T11:57:05.444Z
 ---
+
+- 1: [Linux](./#linux)
+- 1.1: [Snapcraft](./#snapcraft)
 
 # Linux
 
