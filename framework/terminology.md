@@ -2,7 +2,7 @@
 title: Terminology
 description: 
 published: true
-date: 2022-11-03T09:56:16.601Z
+date: 2022-11-04T16:20:18.746Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T17:49:15.836Z
@@ -14,7 +14,7 @@ Every day we participate in a society where acronyms, abbreviations and slang ex
 
 These terminologies can be frightening for the uninitiated, and makes participating in conversations a lot harder than it needs to be.
 
-In this article we break it down for you, to help you get a grasp of some of the most commonly used terminology in the DigiByte ecosystem.
+In this article we break it down for you, to help you get a grasp of some of the commonly used terminology in the DigiByte ecosystem.
 
 # Technology
 
@@ -24,18 +24,18 @@ In this article we break it down for you, to help you get a grasp of some of the
 
 A blockchain is a type of database that distributes and shares data between nodes on a network.
 
-On a traditional database, data are usually stored in tables as separate entries for each data point, but on a blockchain the data is grouped together as a collection in what we call blocks.
+On a traditional database, data are usually stored in tables as separate entries for each data point. On a blockchain the data is grouped together as a collection in what we call blocks.
 
 On a cryptocurrency blockchain, each data entry is a transaction. For a transaction to be broadcasted to the network, it first must go to what is called a mempool
 
-Each block has a specific storage capacity written into the code base, on the DigiByte Protocol the storage capacity of each block is 1 MB (or one million bytes).  
+Each block has a specific storage capacity written into the code base. On the DigiByte Protocol the storage capacity of each block is 1 MB (or one million bytes).  
 When a block has reached its storage capacity, transactions will have to keep queuing in the [**mempool**](#mempool).
 
 When a block is generated and broadcasted to the network, a [**hash**](#hash) is generated. When it's time for a new block to be generated, it uses the hash from the previous block combined with the new data in the current block to create a new unique hash, the process is the same for all new blocks.
 
 This data structure is what creates a irreversible timeline with inherently immutable data. If you attempted to go back to a previous block and change the data, subsequently the hash would also change, and all blocks after that would have to be re-validated. The difficulty to perform such an action increases with every given block.
 
-The notion of data being comprised as blocks and continuously broadcasted, is what gives blockchain its name, a chain of blocks.
+The notion of data being comprised as blocks and continuously broadcasted is what gives blockchain its name, a chain of blocks.
 
 ## Mempool
 
@@ -45,15 +45,17 @@ Once a transaction is verified, otherwise known as “mined”, the transaction 
 
 On average, the DigiByte [**Blockchain**](#blockchain) verifies a block every 15 seconds. That means that when a block has reached its storage capacity, transactions must sit and wait in the _mempool_ for the next available block.
 
-It should be noted that there are no guarantees that a transaction will make it into the next block, regardless of how long it's been waiting in queue in the mempool, this is because transactions with the highest fee is processed first, as this is of benefit to the miner in terms of rewards received for the computational power they provide. This is the reason for why you may some times see increases in transaction fee on the network, because miners prioritize the highest reward.
+It should be noted that there are no guarantees that a transaction will make it into the next block, regardless of how long it's been waiting in queue in the mempool.
+This is because transactions with the highest fee is prioritized and therefore processed first, as this is of benefit to the miner in terms of rewards received for the computational power they provide. This is the reason for why you may some times see increases in transaction fee on the network, because miners prioritize the highest reward.
 
-In addition, there is a minimum transaction fee on the network, and transaction below this requirement might, in theory, never make it into a block and get broadcasted on the network.
+In addition, there is a minimum transaction fee on the network, and transaction below this requirement might, in theory, never make it into a block and as a result not get broadcasted on the network.
 
 ## Hash
 
-Hashing is a mathematical function that converts a input of any length into an encrypted output of a fixed length, the _Hash_. Hash functions are one-way, so once a hash is generated it can not be used to reverse-engineer the data it was generated from. Regardless of how many times you put the data through a hashing function, the resulting hash will always stay the same, this makes for the perfect way to verify sensitive data without the risk of exposing the content of it.
+Hashing is a mathematical function that converts input of any length into an encrypted output of a fixed length, producing the _Hash_.
+Hash functions are one-way, so once a hash is generated it can not be used to reverse-engineer the data it was generated from. Regardless of how many times you put the data through a hashing function, the resulting hash will always stay the same, this makes for the perfect way to verify sensitive data without the risk of exposing the content of it.
 
-Knowing the hash for a set of data means you can quickly and easily compare data sets to verify that nothing has been altered or corrupted, with the use of the hash.
+Knowing the hash for a set of data means you can quickly and easily compare data sets to verify that nothing has been altered or corrupted.
 
 ## UTXO
 
@@ -62,11 +64,11 @@ An _unspent transaction output_ (**UTXO**) is the technical terminology for the 
 Each time you perform a transaction, a check is made to see how much of a currency is left unspent.  
 You can view the UTXO as the change that is returned to you after you have paid for something with a larger bill than the price.
 
-Each transaction requires both what is known as an [**Input**](#transaction-input) and the [**Output**](#transaction-output). This is what is commonly known as double-entry accounting. Don't worry, we explain it below.
+Each transaction requires both what is known as an [**Input**](#transaction-input) and the [**Output**](#transaction-output). This is what is commonly known as double-entry accounting. Don't worry if this term confused you, we explain it below.
 
 ### Transaction Input
 
-The input needs to be (at least) enough to cover the charge (cost) entered by the user, this can comprised of 1 or several UTXO's, depending on their balance and the cost.
+The input needs to be (at least) enough to cover the charge (cost) entered by the user, this can be comprised of 1 or several UTXO's, depending on their balance and the cost.
 
 This is a method called non-exact, meaning the input is not the exact same amount as the required output.
 
@@ -81,6 +83,11 @@ The transaction output is exact.
 This means an output is the exact required amount of DigiBytes that is going to be sent with the outgoing transaction and will not require the total funds available from the comprised UTXO's.
 
 ### **Example**
+
+> This example assumes that Bill's wallet only contains funds from a total of two transactions, i.e UTXO's.
+{.is-info}
+
+
 
 Let's say that Bill wants to buy some Falafel, and he has 1000 DigiBytes in his account wallet, divided equally from two separate incoming transactions (500 DigiBytes each).
 
@@ -97,6 +104,8 @@ This is where the Output comes in. An output of the required funds is created, c
 Now as the transaction goes out to the Falafel merchant, it will have an output of 800 DigiBytes, and the 200 remaining DigiBytes is send back to Bill as an _unspent transaction output._
 
 Now the next time Bill wants to perform a transaction, there will be one UTXO with a balance of 200 DigiBytes ready to be used as an input for a new transaction.
+
+
 
 ### Key Points
 
