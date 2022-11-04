@@ -2,7 +2,7 @@
 title: Technical Specifications
 description: 
 published: true
-date: 2022-11-04T10:30:01.389Z
+date: 2022-11-04T10:30:08.091Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-23T17:48:12.544Z
